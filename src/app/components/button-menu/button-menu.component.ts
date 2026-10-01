@@ -27,7 +27,9 @@ export class ButtonMenuComponent implements OnInit {
   /**
    * TODO: emit a decrementEvent to the parent component once the decrementEvent EventEmitter has been set up.
    */
+  @Output() decrementEvent = new EventEmitter<any>();
   decrement() {
+    this.decrementEvent.emit();
   }
 
   constructor() { }
